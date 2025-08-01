@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- ESTADO GLOBAL DE LA APLICACIÓN ---
+    // ESTADO GLOBAL DE LA APLICACIÓN
     const MAX_PERSONAS = 6;
     let personas = [];
 
-    // --- REFERENCIAS A ELEMENTOS DEL DOM ---
+    // REFERENCIAS A ELEMENTOS DEL DOM
     const btnVistaAgregar = document.getElementById('btn-vista-agregar');
     const btnVistaBuscar = document.getElementById('btn-vista-buscar');
     const vistaAgregar = document.getElementById('vista-agregar');
