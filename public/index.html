@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gestor de Encuestas Musicales</title>
+
+    <!-- Conexión a la hoja de estilos CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- conexión Favicon Pestaña Navegador -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Conexión a Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Carga model-viewer -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    
+    <!-- Enlace a Iconos Font Awesome -->
+    <script src="https://kit.fontawesome.com/42774e4b93.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+    <model-viewer
+      src="https://raw.githubusercontent.com/CarlosVergaraDev/3d-assets/main/vintage_japanese_radio__mac_gt_rq-540.glb"
+      alt="Vintage Japanese Radio"
+      auto-rotate
+      camera-controls
+
+      exposure="1"
+      shadow-intensity="0.5"
+      style="width: 100%; height: 250px;">
+    </model-viewer>
+
+    <h1 class="titulo-principal"> 📻 Gestor de Encuestas Musicales</h1>
+
+    <main class="app-container">
+        <!-- Menú de Navegación de Vistas -->
+        <nav class="menu-vistas">
+            <button id="btn-vista-agregar" class="activo">🤵 Agregar Persona</button>
+            <button id="btn-vista-buscar">🔎 Buscar Persona</button>
+        </nav>
+
+        <!-- Contenedor para las Vistas -->
+        <div id="vistas-container">
+
+            <!-- VISTA 1: AGREGAR PERSONA -->
+            <section id="vista-agregar">
+                <form id="formulario-persona">
+                    <p class="contador-personas" id="contador">Personas registradas: 0 de 6</p>
+                    <h3>Datos Personales</h3>
+                    <div class="grupo-formulario">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="cedula">Nº de Identificación (Cédula)</label>
+                        <input type="number" id="cedula" required>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="fecha-nacimiento">Fecha de Nacimiento</label>
+                        <input type="date" id="fecha-nacimiento" required>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="ciudad-residencia">Ciudad de Residencia</label>
+                        <input type="text" id="ciudad-residencia" required>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="ciudad-origen">Ciudad de Origen</label>
+                        <input type="text" id="ciudad-origen" required>
+                    </div>
+
+                    <h3>Canciones Favoritas (hasta 3)</h3>
+                    <div id="canciones-container">
+                        <!-- Las canciones se añadirán aquí dinámicamente -->
+                    </div>
+                    <button type="button" id="btn-add-cancion" class="btn-secundario">+ Añadir Canción</button>
+
+                    <div class="acciones-formulario">
+                        <button type="submit" id="btn-guardar">Guardar Persona</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- VISTA 2: BUSCAR PERSONA -->
+            <section id="vista-buscar" class="vista-oculta">
+                <div class="grupo-busqueda">
+                    <label for="input-busqueda">Buscar por Posición (1-6)</label>
+                    <input type="number" id="input-busqueda" min="1" max="6">
+                    <button id="btn-buscar">Buscar</button>
+                </div>
+                <div id="resultado-busqueda">
+                    <!-- La ficha de la persona encontrada se mostrará aquí -->
+                </div>
+            </section>
+        </div>
+        
+        <button id="btn-reiniciar-app" class="btn-secundario">Reiniciar Aplicación</button>
+
+    </main>
+
+    <footer> 
+
+      <div class="info-proyecto" > <p> SENA - Evidencia: GA3-220501093-AA3-EV02 </p> <a href="*" target="_blank">README.md</a> </div>
+      <div class="desarrollador"> <p>Desarrollado por: Carlos Vergara</p>  <a href="https://github.com/CarlosVergaraDev" target="_blank"> <i class="fa-brands fa-github fa-shake"></i> </a> </div>   
+      
+    </footer>
+
+    <!-- Conexión al archivo JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
