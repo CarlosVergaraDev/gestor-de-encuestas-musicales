@@ -66,9 +66,11 @@ function reiniciarAplicacion() {
     // Restaura el estado inicial de la aplicación y limpia el DOM
 }
 
+```
 
 ## 📂 Estructura del Proyecto
 
+```
 ├── README.md
 └── public
     ├── css
@@ -80,6 +82,7 @@ function reiniciarAplicacion() {
     ├── js
     │   └── script.js
     └── site.webmanifest
+```
 
 ## 🛠️ Tecnologías Utilizadas
 
@@ -107,4 +110,4 @@ function reiniciarAplicacion() {
 
 ## 🧑‍💻 Autor
 
-**Carlos Vergara** 
+**Carlos Vergara**
